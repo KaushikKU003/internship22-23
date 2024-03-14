@@ -1,0 +1,26 @@
+%edge detection
+image_virat=imread("20_Images/13.jpg");
+inputImage=rgb2gray(image_virat);
+edgeSobel=edge(inputImage,"sobel");
+edgePrewitt=edge(inputImage,"prewitt");
+edgeRoberts=edge(inputImage,"roberts");
+edgeCanny=edge(inputImage,"canny");
+figure;
+subplot(3,2, 1);
+imshow(image_virat);
+title('Original Image');
+subplot(3,2, 2);
+imshow(inputImage);
+title('gray Image');
+subplot(3,2, 3);
+imshow(edgeSobel);
+title('edgeSobel Image');
+subplot(3,2, 4);
+imshow(edgePrewitt);
+title('edgePrewitt Image');
+subplot(3,2, 5);
+imshow(edgeRoberts);
+title('edgeRoberts Image');
+subplot(3,2, 6);
+imshow(edgeCanny);
+title('edgeCanny Image');
